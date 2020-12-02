@@ -1,0 +1,18 @@
+<div class="container bg-black">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <input
+      type="text"
+      placeholder="Nombre del producto"
+      formControlName="nombre"
+    />
+    <span class="text-danger">
+      {{ verifyField("nombre") }}
+    </span>
+    <input type="number" placeholder="precio" formControlName="precio" />
+    {{ verifyField("precio") }}
+    <input type="number" placeholder="stock" formControlName="stock" />
+    {{ verifyField("stock") }}
+    <button [disabled]="form.invalid">Enviar</button>
+    <!-- <input type="text"> -->
+  </form>
+</div>
