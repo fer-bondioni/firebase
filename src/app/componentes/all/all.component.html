@@ -1,10 +1,13 @@
 <div class="container mt-5">
   <div class="row">
-    <div class="col-lg-4 col-md-4 col-12 mt-3 mb-3">
+    <div
+      class="col-lg-4 col-md-4 col-12 mt-3 mb-3"
+      *ngFor="let product of products"
+    >
       <div class="card text-center">
         <div class="card-body">
-          <h5 class="card-title">{{ products.nombre }}</h5>
-          <a routerLink="#" class="card-link">Ver más</a>
+          <h5 class="card-title">{{ product.nombre }}</h5>
+          <a routerLink="product/{{ product.id }}" class="card-link">Ver más</a>
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ import { ProductosService } from 'src/app/services/productos.service';
   styleUrls: ['./all.component.css'],
 })
 export class AllComponent implements OnInit {
-  products: [] = [];
+  products: Array<{}> = [];
 
   constructor(private _service: ProductosService) {}
 
