@@ -5,12 +5,12 @@ import { ProductoComponent } from './componentes/producto/producto.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
 
 const routes: Routes = [
-  { path: 'productos', component: ProductosComponent },
+  { path: 'productos/create', component: ProductosComponent },
   { path: 'productos/all', component: AllComponent },
   { path: 'productos/:id', component: ProductoComponent },
   {
     path: '**',
-    redirectTo: 'productos',
+    redirectTo: 'productos/create',
     pathMatch: 'full',
   },
 ];

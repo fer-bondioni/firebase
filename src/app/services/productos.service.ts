@@ -7,11 +7,11 @@ import { BaseService } from './base.service';
 })
 export class ProductosService extends BaseService {
   getAll() {
-    this.setEndPoint('productos');
+    this.setEndPoint('productos/all');
     return this.get();
   }
 
-  getSingle(id) {
+  single(id) {
     this.setEndPoint('productos/:id');
     return this.get();
   }
